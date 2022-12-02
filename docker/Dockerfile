@@ -12,5 +12,5 @@ RUN mvn package -Dmaven.test.skip=true
 FROM openjdk:17-jdk
 COPY --from=0 /build/target/springboot-hello-world-0.0.1-SNAPSHOT.jar /app/target/app.jar
 
-EXPOSE 8081
+EXPOSE 8080
 ENTRYPOINT [ "java", "-jar", "/app/target/app.jar"]
